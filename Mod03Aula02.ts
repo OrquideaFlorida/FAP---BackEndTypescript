@@ -81,7 +81,7 @@ class Retangulo {
 }
        
 const oRetangulo = new Retangulo(10, 30);
-console.log(`O Retângulo possui base: ${oRetangulo.largura} e Algura: ${oRetangulo.altura}`);
+console.log(`Retângulo com base: ${oRetangulo.largura} e Algura: ${oRetangulo.altura}`);
 
 oRetangulo.area();
 oRetangulo.perimetro();
@@ -112,24 +112,49 @@ oCirculo.circunferencia();
 //-- Exercício 5 --
 //CRIE UMA CLASSE CONTA BANCÁRIA, COM OS ATRIBUTOS SALDO E numeroConta E MÉTODOS
 // PARA DEPOSITAR, SACAR E VERIFICAR O SALDO
-class ContaBancaria{
-    saldo: number;
-    numeroConta: number;
+//const readline = require("readline-sync");
+//import readline from "readline-sync"
+// class ContaBancaria{
+//     saldo: number;
+//     numeroConta: string;
 
-    constructor(saldo: number, numeroConta: number){
-        this.saldo = saldo;
-        this.numeroConta = numeroConta;
-    }
-    deposito(){
+//     constructor(saldo: number, numeroConta: string){
+//         this.saldo = saldo;
+//         this.numeroConta = numeroConta;
+//     }
+//     deposito(){
+//         let grana = 0
+//         if(!validarGrana(grana)){
+//             console.log("Valor inválido: Digite um valor numérico maior do que zero");
+//             return;
+//         }
+//         this.saldo += grana;
+//         console.log(`Depósito de ${grana.toFixed(2)} realizado com sucesso!`);
+//     }
+//     saque(){
+//         let grana = 0;
+//         if (!validarGrana(grana)){
+//             console.log('Valor inválido: Digite um valor numérico maior do que zero.');
+//             return;
+//         }
+//         if (grana <= this.saldo){
+//             this.saldo -= grana;
+//             console.log(`Saque de ${grana.toFixed(2)} realizado com sucesso!`);
+//         } else {
+//             console.log("Você não possui saldo suficiente.");
+//         }
+//     }
+//     verificarSaldo(){
+//         console.log(`Seu saldo é: R$ ${this.saldo} reais`);
+//     }
+// }
 
-    }
-    saque(){
+// function validarGrana(grana){ //VERIFICAR SE O VALOR É POSITIVO
+//     return !isNaN(grana) && grana >0;
+// }
 
-    }
-    verifSaldo(){
-
-    }
-}
+// const aContaBancaria = new ContaBancaria(500, '123-4');
+// console.log(`Sua conta de N° ${aContaBancaria.numeroConta} possui:`);
 
 // -- Exercício 6 --
 //CRIE UMA CLASSE PRODUTO COM OS ATRIBUTOS NOME, PREÇO E QUANTIDADE E MÉTODOS
