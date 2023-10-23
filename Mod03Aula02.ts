@@ -159,43 +159,83 @@ oCirculo.circunferencia();
 // -- Exercício 6 --
 //CRIE UMA CLASSE PRODUTO COM OS ATRIBUTOS NOME, PREÇO E QUANTIDADE E MÉTODOS
 //PARA CALCULAR O VALOR TOTAL (PREÇO * QUANTIDADE)
-// class Produto{
-//     nome: string;
-//     preço: number;
-//     quantidade: number;
+class Produto{
+    nome: string;
+    preço: number;
+    quantidade: number;
 
-//     constructor(nome: string, preço: number, quantidade: number){
-//         this.nome = nome;
-//         this.preço = preço;
-//         this.quantidade = quantidade;
-//     }
-//     valorTotal(){
+    constructor(nome: string, preço: number, quantidade: number){
+        this.nome = nome;
+        this.preço = preço;
+        this.quantidade = quantidade;
+    }
+    valorTotal(){
+        console.log(`O valor total dos(as) ${this.nome} são R$ ${this.preço * this.quantidade}`);
+    }
+}
+const oProduto = new Produto("Maçãs", 10, 1.50);
 
-//     }
-// }
+oProduto.valorTotal();
 
 // -- Exercício 7 --
 //CRIE UMA CLASSE TRIÂNGULO COM OS ATRIBUTOS LADO1, LADO2, LADO3 E UM MÉTODO
 //PARA SABER SE O TRIÂNCULO É VÁLIDO
-// class Triangulo{
-//     lado1: number;
-//     lado2: number;
-//     lado3: number;
+class Triangulo{
+    lado1: number;
+    lado2: number;
+    lado3: number;
 
-//     constructor(lado1: number, lado2: number, lado3: number){
-//         this.lado1 = lado1;
-//         this.lado2 = lado2;
-//         this.lado3 = lado3;
-//     }
-//     triValido(){
+    constructor(lado1: number, lado2: number, lado3: number){
+        this.lado1 = lado1;
+        this.lado2 = lado2;
+        this.lado3 = lado3;
+    }
 
-//     }
-// }
+    triValido(){
+        if(Math.max(this.lado1, this.lado2, this.lado3) < this.lado2 + this.lado3){
+            console.log("É um triângulo Válido!");
+        } else {
+            console.log("[INVÁLIDO] não pode ser um triângulo!");
+        }
+    }
+    triTipo(){
+        if(this.lado1 === this.lado2 && this.lado1 === this.lado3){
+            console.log("É um Equilátero!");
+        } else if (this.lado1 === this.lado2 || this.lado2 === this.lado3 || this.lado1 === this.lado3 ) {
+            console.log("É um Escaleno!");
+        } else {
+            console.log("É um Isóiceles!");
+        }
+    }
+}
+const oTriangulo = new Triangulo(10, 10, 10);
+
+oTriangulo.triValido();
+oTriangulo.triTipo();
+
+//PARA UM TRIÂNGULO SER VERDADEIRO, SEGUE A SEGUINTE REGRA:
+//O LADO MAIOR DEVE SER MENOR QUE A SOMA DOS OUTROS DOIS LADOS
+
+//MaiorLado < LadoB + LadoC
+
 
 // -- Exercício 8 --
 //CRIE UMA CLASSE LIVRO COM ATRIBUTOS TITULO, AUTOR E anoPublicacao E UM MÉTODO PARA
 //EXIBIR INFORMAÇÕES DO LIVRO
+class Livro{
+    Titulo: String;
+    Autor: String;
+    anoPublicacao: number;
 
+    constructor (Titulo: String, Autor: String, anoPublicacao: number){
+        this.Titulo = Titulo;
+        this.Autor = Autor;
+        this.anoPublicacao = anoPublicacao;
+    }
+    infoLivro(){
+        
+    }
+}
 
 // -- Exercício 9 --
 //CRIE UMA CLASSE AGENDA, QUE PERMITA ADICIONAR, LISTAR E REMOVER CONTATOS (NOME E NÚMEROS
