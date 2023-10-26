@@ -223,19 +223,25 @@ oTriangulo.triTipo();
 //CRIE UMA CLASSE LIVRO COM ATRIBUTOS TITULO, AUTOR E anoPublicacao E UM MÉTODO PARA
 //EXIBIR INFORMAÇÕES DO LIVRO
 class Livro{
-    Titulo: String;
-    Autor: String;
+    titulo: String;
+    autor: String;
     anoPublicacao: number;
 
-    constructor (Titulo: String, Autor: String, anoPublicacao: number){
-        this.Titulo = Titulo;
-        this.Autor = Autor;
+    constructor (titulo: String, autor: String, anoPublicacao: number){
+        this.titulo = titulo;
+        this.autor = autor;
         this.anoPublicacao = anoPublicacao;
     }
     infoLivro(){
-        
+        console.log("--INFORMAÇÕES LITERÁRIAS--");
+        console.log(`Título: ${this.titulo}`);
+        console.log(`Autor: ${this.autor}`);
+        console.log(`Ano de Publicação: ${this.anoPublicacao}`);
     }
 }
+const oLivro = new Livro("O Senhor dos Anéis", "JRR Tolkien", 1954);
+
+oLivro.infoLivro();
 
 // -- Exercício 9 --
 //CRIE UMA CLASSE AGENDA, QUE PERMITA ADICIONAR, LISTAR E REMOVER CONTATOS (NOME E NÚMEROS
@@ -245,4 +251,17 @@ class Livro{
 // -- Exercício 10 --
 //CRIE UMA CLASSE carroEsportivo QUE HERDA DA CLASSE CARRO (USADA NO EXEMPLO ANTERIOR) E TENHA
 //MÉTODOS ADICIONAIS PARA ACELERAR RAPIDAMENTE E PRODUZIR UM SOM ESPORTIVO
+class carroEsportivo extends Carro{
+    cor: string;
 
+    constructor(marca: string, modelo: string, ano: number, cor: string){
+        super(marca, modelo, ano);
+        this.cor = cor;
+    }
+    Acelerar(){
+        console.log("Vrum, Vrum, Vruuuuuuummmmm...");
+    }
+}
+const carroEsportivos = new carroEsportivo("Porsche", "Cabriolet", 2023, "Verde");
+
+carroEsportivos.Acelerar();
