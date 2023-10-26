@@ -10,11 +10,12 @@ class Animal {
         this.porte = porte;
         this.patas = patas;
     }
-    queAnimal(){
+    animalFaz(){
+console.log(`O ${this.nome} faz `);
 
     }
 }
-let aAnimal = new Animal("Cachorro", "Médio", 4);
-console.log(`Meu animal é um ${aAnimal.nome} de porte ${aAnimal.porte} de possui ${aAnimal.patas} patas.`);
+//let aAnimal = new Animal("Cachorro", "Médio", 4);
+//console.log(`Meu animal é um ${aAnimal.nome} de porte ${aAnimal.porte} de possui ${aAnimal.patas} patas.`);
 
 

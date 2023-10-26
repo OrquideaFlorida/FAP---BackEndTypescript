@@ -9,3 +9,24 @@ class Mamifero extends Animal {
     }
     
 }
+
+// export class Cachorro extends Mamifero{
+//     animalFaz(): void{
+//         console.log("Au, Au!");
+//     }
+// }
+// export class Gato extends Mamifero{
+//     animalFaz(): void{
+//         console.log("Miau!")
+//     }
+// }
+
+
+// function main(){
+//     const cachorro = new Cachorro();
+//     const gato = new Gato();
+
+//     cachorro.animalFaz();
+//     gato.animalFaz();
+// }
+// main();
