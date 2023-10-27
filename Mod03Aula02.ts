@@ -112,8 +112,6 @@ oCirculo.circunferencia();
 //-- Exercício 5 --
 //CRIE UMA CLASSE CONTA BANCÁRIA, COM OS ATRIBUTOS SALDO E numeroConta E MÉTODOS
 // PARA DEPOSITAR, SACAR E VERIFICAR O SALDO
-//const readline = require("readline-sync");
-//import readline from "readline-sync"
 // class ContaBancaria{
 //     saldo: number;
 //     numeroConta: string;
