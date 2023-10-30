@@ -6,15 +6,20 @@ export interface Telhas{
 export interface Tijolos{
     quantos: number;
 }
+export interface RevestPiso{
+    cor: string;
+}
 
 
 export class Casa{
     telhas: Telhas;
     tijolos: Tijolos;
+    revestPiso: RevestPiso;
 
-    constructor(telhas: Telhas, tijolos: Tijolos){
+    constructor(telhas: Telhas, tijolos: Tijolos, revestPiso: RevestPiso){
         this.telhas = telhas;
         this.tijolos = tijolos;
+        this.revestPiso = revestPiso;
     }
 }
 
@@ -23,9 +28,7 @@ export class Brasilit implements Telhas{
     tamanho: number;
 
     constructor(tamanho: number){
-
         this.tamanho = tamanho;
-    
     }
 }
 
@@ -36,15 +39,24 @@ export class Alvenaria implements Tijolos{
         this.quantos = numero; 
     }
 }
+export class Ceramica implements RevestPiso{
+    cor: string;
+
+    constructor(cor: string){
+        this.cor = cor;
+    }
+}
 
 const teto = new Brasilit(200);
 const parede = new Alvenaria(2000);
+const piso = new Ceramica("Verde");
 
-const casa = new Casa(teto, parede)
+const casa = new Casa(teto, parede, piso);
 
 console.log("Para construir minha casa, preciso de: ");
 console.log(casa.telhas);
 console.log(casa.tijolos);
+console.log(casa.revestPiso);
 
 
 
